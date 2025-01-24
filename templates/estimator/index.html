@@ -1,0 +1,18 @@
+{% extends 'app/nav_menu.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+    <meta charset="UTF-8">
+    <link href="{% static 'app/main.css' %}" rel="stylesheet" type="text/css">
+    <title>Title</title>
+{% endblock %}
+    <body>
+        {% block content %}
+        <div class="content-container">
+            Estimator
+        </div>
+        {% endblock %}
+    </body>
+</html>

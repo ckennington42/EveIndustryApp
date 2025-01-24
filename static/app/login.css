@@ -1,0 +1,16 @@
+.login-wrapper {
+    width:100%;
+    display:block;
+    z-index: 100;
+}
+
+.login-panel {
+    border-radius: 7px;
+    background:#6b6a63;
+    padding:6px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 110;
+}

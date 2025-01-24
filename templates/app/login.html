@@ -1,0 +1,27 @@
+{% load static %}
+{% load eve_auth %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'app/login.css' %}" rel="stylesheet" type="text/css">
+    <title>Title</title>
+</head>
+    <body>
+         <div class="wrapper">
+            <div class="login-wrapper">
+                <div class="login-panel">
+                    <div class="welcome-message">
+                        <h1>EVE Production Assistant</h1>
+                        <h4>EPA is a tool designed to help make the production of T3 ships and modules easier.</h4>
+                    </div>
+                    <div class="sso-button">
+                        <a href="{% url 'eve_auth:login' %}">
+                            <img src = "{% static 'app/images/eve-sso-login-black-large.png' %}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+{% load static %}
+{% load eve_auth %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="{% static 'app/nav_menu.css' %}" rel="stylesheet" type="text/css">
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar-container">
+                <div class="sidebar">
+                    <div class="menu-item mi-tall">
+                        <p style="font-size: 24px; color: cyan;">Eve Industry Manager</p>
+                    </div>
+                    <div class="menu-item mi-tall mi-border">
+                        <span>{% user_icon user 64 %}</span>
+                        <p>{{ user.eve_character.character_name }}</p>
+                    </div>
+                    <nav>
+                        <a href="/">
+                            <div class="menu-button mi-normal">
+                                <img src="{% static 'app/images/icon.png' %}" width="32" height="32">
+                                <p>Dashboard</p>
+                            </div>
+                        </a>
+                        <a href="{% url 'estimator' %}">
+                            <div class="menu-button mi-normal">
+                                <img src="{% static 'app/images/icon.png' %}" width="32" height="32">
+                                <p>Production Estimator</p>
+                            </div>
+                        </a>
+                        <a href="{% url 'inventory' %}">
+                            <div class="menu-button mi-normal">
+                                <img src="{% static 'app/images/icon.png' %}" width="32" height="32">
+                                <p>Inventory</p>
+                            </div>
+                        </a>
+                    </nav>
+                    <div id="logout">
+                        <a href="{% url 'eve_auth:logout' %}"> logout </a>
+                    </div>
+                </div>
+            </div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+.content-container {
+    position: absolute;
+    left: 20%;
+    width: 80%;
+    height: inherit;
+    min-height:100%;
+    background-color: #C6C6C6;
+    display: flex;
+}
